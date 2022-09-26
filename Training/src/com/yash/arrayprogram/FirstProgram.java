@@ -4,7 +4,7 @@ package com.yash.arrayprogram;
 import java.util.Scanner;
 
 public class FirstProgram {
-
+	 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter array size");
@@ -24,6 +24,17 @@ public class FirstProgram {
 			}
 		}
 			
+		}
+		for(int i=0;i<size;i++)
+		{
+			for(int j=i+1;j<size;j++)
+			{
+				if(a[i]==a[j]) {
+	                    System.out.println("Duplicates Elements Are :" + a[i]);
+	                    a[j] = a[size - 1];
+	                    size--;
+	                }
+			}
 		}
 		int i;
 		for( i=0;i<size;i++) {
