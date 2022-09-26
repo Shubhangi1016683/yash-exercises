@@ -5,6 +5,7 @@ public class ThirdProgram {
 	public static void main(String[] args) {
 		
     	DynamicArray addNumber = new DynamicArray(6);
+    
     	addNumber.insert(56);
     	addNumber.insert(67);
     	addNumber.insert(40);

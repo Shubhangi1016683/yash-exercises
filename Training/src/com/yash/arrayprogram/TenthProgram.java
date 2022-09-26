@@ -1,5 +1,6 @@
 package com.yash.arrayprogram;
-
+/*You are having array of numbers. Now you have to arrange numbers in array on the basis of the 
+length of each number. Smallest number length will be first and so on.*/
 public class TenthProgram {
 
 	public static void main(String[] args) {
