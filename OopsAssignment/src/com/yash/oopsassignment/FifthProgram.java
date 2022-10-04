@@ -27,6 +27,7 @@ public class FifthProgram {
 		
 		System.out.println("Sorted array ");
 		for(int i=0;i<a.length;i++) {
+			max=a[i];
 			System.out.println(a[i]);
 		}
 	
@@ -46,7 +47,7 @@ public class FifthProgram {
 				}
 			}
 		}
-		System.out.println("Longest String :- "+max);
+		System.out.println("Longest String :- "+arr[arr.length-1]);
 	}
 	public static void main(String[] args) {
 		FifthProgram f=new FifthProgram();
