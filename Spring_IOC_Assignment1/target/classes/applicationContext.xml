@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"	 xmlns:context="http://www.springframework.org/schema/context"
+xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	 <context:annotation-config/>
+	 
+	<bean id="movieBean" class="com.yash.springIOC.model.Movie">
+  <constructor-arg value="KGF"></constructor-arg>
+  <constructor-arg value="11:00 AM to 2:00 PM, and other timing"></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall" class="com.yash.springIOC.model.CinemaHall">
+   <constructor-arg value="Ionx"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg>  
+        <ref bean="movieBean"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city" class="com.yash.springIOC.model.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411093"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall"/>  
+  </constructor-arg>  
+   </bean>
+   
+   	<bean id="movieBean1" class="com.yash.springIOC.model.Movie">
+  <constructor-arg value="Rakshabandhan"></constructor-arg>
+  <constructor-arg value="11:00 AM to 1:30 PM and other timing "></constructor-arg>
+   </bean>	
+   
+   <bean id="cinemaHall1" class="com.yash.springIOC.model.CinemaHall">
+   <constructor-arg value="Velocity"></constructor-arg>
+  <!-- <constructor-arg value="GADAR2"></constructor-arg> -->
+   <constructor-arg>  
+        <ref bean="movieBean1"/>  
+    </constructor-arg> 
+   </bean>
+   
+    <bean id="city1" class="com.yash.springIOC.model.City">
+    <constructor-arg value="Pune"></constructor-arg>
+  <constructor-arg value="411093"></constructor-arg>
+  <!-- <constructor-arg value="Ionx"></constructor-arg> -->
+   <constructor-arg>  
+      <ref bean="cinemaHall1"/>  
+  </constructor-arg>  
+   </bean>
+	 </beans>
